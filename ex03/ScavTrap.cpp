@@ -6,32 +6,39 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 22:17:55 by aparolar          #+#    #+#             */
-/*   Updated: 2022/07/25 17:18:28 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/10/10 19:59:15 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() {}
+
+ScavTrap::ScavTrap(ScavTrap const &toCopy)
 {
-	std::cout << "ScavTrap calling constructor" << ::std::endl;
-	_name = "";
-	_hitPoints = 100;
-	_energyPoints = 50;
-	_attackDamange = 20;
+	*this = toCopy;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << "ScavTrap calling constructor" << ::std::endl;
-	_hitPoints = 100;
-	_energyPoints = 50;
-	_attackDamange = 20;
+	std::cout << "ScavTrap calling constructor from " << getName() << ::std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap calling destructor" << ::std::endl;
+	std::cout << "ScavTrap calling destructor from " << getName() << ::std::endl;
+}
+
+ScavTrap& ScavTrap::operator = (ScavTrap const &toCopy)
+{
+	this->_name = toCopy.getName();
+	this->_hitPoints = toCopy.getHitPoints();
+	this->_energyPoints = toCopy.getEnergyPoints();
+	this->_attackDamange = toCopy.getAttackDamange();
+
+
+	//ClapTrap = toCopy.ClapTrap;
+	return *this;
 }
 
 void ScavTrap::attack(std::string const & target)
@@ -45,3 +52,4 @@ void ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap have entered in Gate keeper mode" << std::endl;
 }
+

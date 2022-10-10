@@ -14,7 +14,7 @@ all:			$(NAME)
 re:				fclean all
 
 clean:			
-				rm *.o
+				rm -f *.o
 
 fclean:			clean
 				rm -f $(NAME)
