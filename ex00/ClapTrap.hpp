@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:08:32 by aparolar          #+#    #+#             */
-/*   Updated: 2022/07/18 18:37:37 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/10/10 15:45:36 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,11 @@ class ClapTrap
 
 	public:
 		ClapTrap(void);
+		ClapTrap(ClapTrap const &toCopy);
 		ClapTrap(std::string name);
 		~ClapTrap(void);
+
+		ClapTrap& operator = (ClapTrap const &toCopy);
 
 		std::string	getName(void) const;
 		int		getHitPoints(void) const;

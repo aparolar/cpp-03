@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:33:20 by aparolar          #+#    #+#             */
-/*   Updated: 2022/07/19 12:26:15 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/10/10 16:13:33 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,4 @@ class FragTrap : public ClapTrap
 };
 
 #endif
+

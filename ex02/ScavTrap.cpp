@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 22:17:55 by aparolar          #+#    #+#             */
-/*   Updated: 2022/07/19 10:17:12 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/10/10 16:13:48 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,4 @@ void ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap have entered in Gate keeper mode" << std::endl;
 }
+

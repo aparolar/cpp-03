@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:08:22 by aparolar          #+#    #+#             */
-/*   Updated: 2022/07/18 18:39:08 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/10/10 15:53:41 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,27 @@ ClapTrap::ClapTrap(void)
 
 }
 
+ClapTrap::ClapTrap(ClapTrap const &toCopy)
+{
+	*this = toCopy;
+}
+
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamange(0)
 {
-	std::cout << "Calling constructor from " << _name << ::std::endl;
+	std::cout << "Calling constructor from " << _name << std::endl;
 }
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "Calling destructor from " << _name << ::std::endl;
+	std::cout << "Calling destructor from " << _name << std::endl;
+}
+
+ClapTrap&	ClapTrap::operator = (ClapTrap const &toCopy)
+{
+	this->_hitPoints = toCopy._hitPoints;
+	this->_energyPoints = toCopy._energyPoints;
+	this->_attackDamange = toCopy._attackDamange;
+	return *this;
 }
 
 std::string ClapTrap::getName(void) const
