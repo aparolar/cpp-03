@@ -6,15 +6,17 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 22:17:55 by aparolar          #+#    #+#             */
-/*   Updated: 2022/10/10 16:36:10 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:57:32 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(ScavTrap const &toCopy)
+ScavTrap::ScavTrap() {}
+
+ScavTrap::ScavTrap(ScavTrap const &toCopy) : ClapTrap(toCopy)
 {
-	*this = toCopy;
+	std::cout << "ScavTrap calling copy constructor from " << getName() << ::std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
@@ -33,9 +35,6 @@ ScavTrap& ScavTrap::operator = (ScavTrap const &toCopy)
 	this->_hitPoints = toCopy.getHitPoints();
 	this->_energyPoints = toCopy.getEnergyPoints();
 	this->_attackDamange = toCopy.getAttackDamange();
-
-
-	//ClapTrap = toCopy.ClapTrap;
 	return *this;
 }
 

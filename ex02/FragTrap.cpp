@@ -6,15 +6,17 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:33:29 by aparolar          #+#    #+#             */
-/*   Updated: 2022/10/10 19:23:14 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:59:14 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(FragTrap const &toCopy)
+FragTrap::FragTrap() {}
+
+FragTrap::FragTrap(FragTrap const &toCopy) :ClapTrap(toCopy)
 {
-	*this = toCopy;
+	std::cout << "FragTrap calling Copy constructor from " << getName() << ::std::endl;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)

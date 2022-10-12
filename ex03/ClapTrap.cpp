@@ -6,18 +6,17 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:08:22 by aparolar          #+#    #+#             */
-/*   Updated: 2022/10/10 19:41:55 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/10/11 17:42:05 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void)
-{
-}
+ClapTrap::ClapTrap(void) {}
 
 ClapTrap::ClapTrap(ClapTrap const &toCopy)
 {
+	std::cout << "ClapTrap Calling Copy constructor from " << _name << ::std::endl;
 	*this = toCopy;
 }
 

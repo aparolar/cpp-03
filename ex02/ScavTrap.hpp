@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 22:13:46 by aparolar          #+#    #+#             */
-/*   Updated: 2022/10/10 16:24:12 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:13:06 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class ScavTrap : public ClapTrap
 {
 	public:
+		ScavTrap();
 		ScavTrap(ScavTrap const &toCopy);
 		ScavTrap(std::string name);
 		~ScavTrap();
