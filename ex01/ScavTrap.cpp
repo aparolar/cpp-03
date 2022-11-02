@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 22:17:55 by aparolar          #+#    #+#             */
-/*   Updated: 2022/10/10 16:36:10 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/11/02 17:43:32 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,7 @@ ScavTrap& ScavTrap::operator = (ScavTrap const &toCopy)
 
 void ScavTrap::attack(std::string const & target)
 {
-	std::cout << "ScavTrap " << getName();
-	std::cout << " attack "	<< target << ", causing ";
-	std::cout << getEnergyPoints() << " points of damange!" << std::endl;
+	std::cout << "ScavTrap " << getName() << " attack "	<< target << ", causing " << getEnergyPoints() << " points of damange!" << std::endl;
 }
 
 void ScavTrap::guardGate()

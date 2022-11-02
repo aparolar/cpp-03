@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 22:17:55 by aparolar          #+#    #+#             */
-/*   Updated: 2022/10/10 16:13:48 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/11/02 17:44:05 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ ScavTrap::~ScavTrap()
 
 void ScavTrap::attack(std::string const & target)
 {
-	std::cout << "ScavTrap " << getName();
-	std::cout << " attack "	<< target << ", causing ";
-	std::cout << getEnergyPoints() << " points of damange!" << std::endl;
+	std::cout << "ScavTrap " << getName() << " attack "	<< target << ", causing " << getEnergyPoints() << " points of damange!" << std::endl;
 }
 
 void ScavTrap::guardGate()
