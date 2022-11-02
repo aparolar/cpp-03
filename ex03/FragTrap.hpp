@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:33:20 by aparolar          #+#    #+#             */
-/*   Updated: 2022/07/25 14:44:48 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/10/10 20:06:28 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,16 @@
 
 class FragTrap : virtual public ClapTrap
 {
-	protected:
-		FragTrap();
 	public:
+		FragTrap();
+		FragTrap(FragTrap const &toCopy);
 		FragTrap(std::string name);
 		~FragTrap();
+
+		FragTrap& operator = (FragTrap const &toCopy);
 
 		void highFivesGuys(void);
 };
 
 #endif
+

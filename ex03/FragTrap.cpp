@@ -6,28 +6,40 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:33:29 by aparolar          #+#    #+#             */
-/*   Updated: 2022/07/25 17:18:00 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/10/10 19:58:32 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap()
+FragTrap::FragTrap() {}
+
+FragTrap::FragTrap(FragTrap const &toCopy)
 {
-	std::cout << "FragTrap calling constructor" << ::std::endl;
+	*this = toCopy;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << "FragTrap calling constructor" << ::std::endl;
+	std::cout << "FragTrap calling constructor from " << getName() << ::std::endl;
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap calling destructor" << ::std::endl;
+	std::cout << "FragTrap calling destructor from " << getName() << ::std::endl;
+}
+
+FragTrap&	FragTrap::operator = (FragTrap const &toCopy)
+{
+	this->_name = toCopy.getName();
+	this->_hitPoints = toCopy.getHitPoints();
+	this->_energyPoints = toCopy.getEnergyPoints();
+	this->_attackDamange = toCopy.getAttackDamange();
+	return *this;
 }
 
 void FragTrap::highFivesGuys(void)
 {
 	std::cout << "Hey guys! Give me a high five!" << std::endl;
 }
+

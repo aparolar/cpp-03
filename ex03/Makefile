@@ -1,5 +1,5 @@
 NAME		=	DiamondTrap
-CXX			=	clang++ $(CXXFLAGS) -std=c++98
+CXX			=	clang++ $(CXXFLAGS) -std=c++98 -pedantic
 42FLAGS		=	-Wall -Werror -Wextra
 CXXFLAGS 	=	$(42FLAGS)
 LDFLAGS		=	-fsanitize=address
@@ -14,7 +14,7 @@ all:			$(NAME)
 re:				fclean all
 
 clean:			
-				rm *.o
+				rm -f *.o
 
 fclean:			clean
 				rm -f $(NAME)
