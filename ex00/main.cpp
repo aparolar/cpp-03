@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:07:29 by aparolar          #+#    #+#             */
-/*   Updated: 2022/10/10 16:02:58 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/11/04 09:50:16 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,11 @@
 
 int	main(void)
 {
-	ClapTrap	a("Chuck Norris");
+	ClapTrap	a("ChuckNorris");
 	a.takeDamange(4);
 	a.takeDamange(3);
 	a.beRepaired(4);
-	a.attack("Bob esponja");
-
-	ClapTrap b = a;
-	b.takeDamange(2);
-	b.beRepaired(10);
-	b.attack("Loli");
-
-	std::cout << "a = " << &a << " b = " << &b << std::endl;
+	a.attack("BobEsponja");
 
 	return (0);
 }

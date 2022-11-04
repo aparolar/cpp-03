@@ -1,6 +1,6 @@
 NAME		=	DiamondTrap
 CXX			=	clang++ $(CXXFLAGS) -std=c++98 -pedantic
-42FLAGS		=	-Wall -Werror -Wextra
+42FLAGS		=	-Wall -Werror -Wextra -Wshadow -Wno-shadow
 CXXFLAGS 	=	$(42FLAGS)
 LDFLAGS		=	-fsanitize=address
 SRCS		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp

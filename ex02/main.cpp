@@ -6,7 +6,7 @@
 /*   By: aparolar <aparolar@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:07:29 by aparolar          #+#    #+#             */
-/*   Updated: 2022/10/11 13:57:29 by aparolar         ###   ########.fr       */
+/*   Updated: 2022/11/04 09:58:32 by aparolar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,27 @@
 
 int	main(void)
 {
-	FragTrap	x("Chuck Norris");
-	x.takeDamange(6);
-	x.beRepaired(4);
-	x.attack("Bob esponja");
-	x.highFivesGuys();
-
-	ScavTrap	a("Maria Antonietta");
-	a.takeDamange(6);
+	std::cout << "-----ClapTrap-----" << std::endl;
+	ClapTrap	a("ChuckNorris");
+	a.takeDamange(4);
+	a.takeDamange(3);
 	a.beRepaired(4);
-	a.attack("Bruce Willis");
-	a.guardGate();
+	a.attack("BobEsponja");
 
+	std::cout << "-----ScavTrap-----" << std::endl;
+	ScavTrap	b("MarioPirulo");
+	b.takeDamange(a.getEnergyPoints());
+	b.beRepaired(4);
+	b.attack("Goku");
+	b.guardGate();
 
-	ScavTrap c = a;
+	std::cout << "-----FragTrap-----" << std::endl;
+	FragTrap	c("MariaAntonietta");
+	c.takeDamange(6);
+	c.beRepaired(4);
+	c.attack(b.getName());
+	c.highFivesGuys();
+
 	return (0);
 }
 
